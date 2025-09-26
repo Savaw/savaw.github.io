@@ -1,0 +1,120 @@
+/* --- CSS Variables for Theming --- */
+:root {
+    --bg-color: #f8f9fa; /* Softer off-white */
+    --text-color: #212529;
+    --header-font: 'Playfair Display', serif;
+    --body-font: 'Inter', sans-serif;
+    --border-color: #dee2e6;
+    --accent-color: #b3c7f7; /* Lighter pastel blue */
+    --link-hover: #0056b3;
+    --icon-color: #495057;
+    --block-bg: #ffffff;
+}
+
+[data-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --border-color: #343a40;
+    --accent-color: #3d3b5b;
+    --link-hover: #a9b8ff;
+    --icon-color: #adb5bd;
+    --block-bg: #1e1e1e;
+}
+
+/* --- General Styles & Typography --- */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--body-font);
+    line-height: 1.7;
+    margin: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+.container { max-width: 800px; margin: 0 auto; padding: 2rem; }
+h1, h2, h3 { font-family: var(--header-font); color: var(--text-color); margin: 0; }
+h1 { font-size: 2.8rem; }
+h2 { font-size: 1.8rem; margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border-color); }
+h3 { font-size: 1.3rem; margin-bottom: 0.5rem; }
+p { margin-top: 0; margin-bottom: 1rem; }
+a { color: var(--text-color); text-decoration: none; font-weight: 500; transition: color 0.2s ease-in-out; }
+a:hover { color: var(--link-hover); }
+
+/* --- Header & Navigation --- */
+header { border-bottom: 1px solid var(--border-color); margin-bottom: 3rem; padding-bottom: 1rem; }
+nav { display: flex; justify-content: space-between; align-items: center; }
+nav .logo a { font-family: var(--header-font); font-size: 1.5rem; font-weight: 600; border: none; }
+nav .logo a:hover { border: none; }
+
+/* --- Icon Group (Photography & Theme Toggle) --- */
+.icon-group { display: flex; align-items: center; gap: 0.8rem; }
+.icon-group button, .icon-group a {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon-group svg {
+    width: 22px;
+    height: 22px;
+    stroke: var(--icon-color);
+    transition: all 0.2s ease-in-out;
+}
+.icon-group button:hover svg, .icon-group a:hover svg {
+    transform: scale(1.15) rotate(5deg);
+    stroke: var(--link-hover);
+}
+.icon-moon { display: none; }
+[data-theme="dark"] .icon-sun { display: none; }
+[data-theme="dark"] .icon-moon { display: block; }
+
+
+/* --- Hero Section --- */
+#hero { text-align: center; margin-bottom: 3rem; }
+#hero .tagline { font-size: 1.2rem; color: #6c757d; }
+[data-theme="dark"] #hero .tagline { color: #adb5bd; }
+
+/* --- NEW: Content Block Layout --- */
+.content-block {
+    background-color: var(--block-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px; /* Curved corners */
+    padding: 2rem;
+    margin-bottom: 2rem;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+@media (max-width: 600px) { .content-block { padding: 1.5rem; } }
+
+/* --- About Section & Profile Photo --- */
+#about::after { content: ""; display: table; clear: both; } /* Clearfix for floated photo */
+.profile-photo {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    float: left;
+    margin-right: 1.5rem;
+    margin-bottom: 0.5rem;
+    border: 2px solid var(--border-color);
+}
+
+/* --- Contact Section & Icons --- */
+.social-links { display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: center; }
+.social-links svg { width: 26px; height: 26px; } /* Icons inherit hover from .icon-group */
+
+/* --- Publications --- */
+#publications ul { padding-left: 20px; margin: 0; }
+#publications ul li { margin-bottom: 0.8rem; }
+
+/* --- Footer --- */
+footer { border-top: 1px solid var(--border-color); padding-top: 1.5rem; margin-top: 2rem; text-align: center; font-size: 0.9rem; color: #6c757d; }
+
+/* --- Responsive Design --- */
+@media (max-width: 600px) {
+    .container { padding: 1rem; }
+    .profile-photo { float: none; display: block; margin: 0 auto 1.5rem auto; }
+    nav .logo { font-size: 1.2rem; }
+    .icon-group { position: absolute; top: 1.5rem; right: 1rem; }
+}
