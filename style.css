@@ -1,24 +1,28 @@
 /* --- CSS Variables for Theming --- */
 :root {
-    --bg-color: #f8f9fa; /* Softer off-white */
+    --bg-color: #f8f9fa;
     --text-color: #212529;
     --header-font: 'Playfair Display', serif;
+    /* --header-font: 'Cormorant Garamond', serif; Changed from Playfair Display */
     --body-font: 'Inter', sans-serif;
-    --border-color: #dee2e6;
-    --accent-color: #b3c7f7; /* Lighter pastel blue */
-    --link-hover: #0056b3;
+    --border-color: #899096;
+    /* High-contrast border */
+    --link-hover: #7497e8;
     --icon-color: #495057;
-    --block-bg: #ffffff;
+    --icon-accent-color: var(--icon-color);
+    /* New pastel purple for icons */
 }
+
 
 [data-theme="dark"] {
     --bg-color: #121212;
     --text-color: #e0e0e0;
-    --border-color: #343a40;
-    --accent-color: #3d3b5b;
-    --link-hover: #a9b8ff;
+    --border-color: #6c757d;
+    /* --link-hover: #a9b8ff; */
+    --link-hover: #ccaccf;
     --icon-color: #adb5bd;
-    --block-bg: #1e1e1e;
+    --icon-accent-color: var(--icon-color);
+    /* Dark mode uses standard icon color */
 }
 
 /* --- General Styles & Typography --- */
@@ -30,36 +34,109 @@ body {
     margin: 0;
     transition: background-color 0.3s, color 0.3s;
 }
-.container { max-width: 800px; margin: 0 auto; padding: 2rem; }
-h1, h2, h3 { font-family: var(--header-font); color: var(--text-color); margin: 0; }
-h1 { font-size: 2.8rem; }
-h2 { font-size: 1.8rem; margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border-color); }
-h3 { font-size: 1.3rem; margin-bottom: 0.5rem; }
-p { margin-top: 0; margin-bottom: 1rem; }
-a { color: var(--text-color); text-decoration: none; font-weight: 500; transition: color 0.2s ease-in-out; }
-a:hover { color: var(--link-hover); }
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--header-font);
+    color: var(--text-color);
+    margin: 0;
+}
+
+h1 {
+    font-size: 2.2rem;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+    transition: color 0.2s ease-in-out;
+}
+
+h1:hover {
+    color: var(--link-hover);
+}
+
+h2:hover {
+    color: var(--link-hover);
+}
+
+h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+    color: var(--link-hover);
+}
 
 /* --- Header & Navigation --- */
-header { border-bottom: 1px solid var(--border-color); margin-bottom: 3rem; padding-bottom: 1rem; }
-nav { display: flex; justify-content: space-between; align-items: center; }
-nav .logo a { font-family: var(--header-font); font-size: 1.5rem; font-weight: 600; border: none; }
-nav .logo a:hover { border: none; }
+header {
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+}
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+}
+.identity h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0;
+}
+.identity a {
+    text-decoration: none; /* Removes underline from linked h1 */
+}
+.affiliation {
+    color: #6c757d;
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+.affiliation span {
+    display: block;
+}
+[data-theme="dark"] .affiliation {
+    color: #adb5bd;
+}
 
 /* --- Icon Group (Photography & Theme Toggle) --- */
-.icon-group { display: flex; align-items: center; gap: 0.8rem; }
+.icon-group {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Increased gap for better spacing */
+    margin-top: 20px; /* Aligns icons nicely with the title */
+}
 .icon-group button, .icon-group a {
     background: none;
     border: none;
     cursor: pointer;
     padding: 0;
     display: flex;
-    align-items: center;
-    justify-content: center;
 }
 .icon-group svg {
     width: 22px;
     height: 22px;
-    stroke: var(--icon-color);
+    stroke: var(--icon-accent-color);
     transition: all 0.2s ease-in-out;
 }
 .icon-group button:hover svg, .icon-group a:hover svg {
@@ -72,49 +149,174 @@ nav .logo a:hover { border: none; }
 
 
 /* --- Hero Section --- */
-#hero { text-align: center; margin-bottom: 3rem; }
-#hero .tagline { font-size: 1.2rem; color: #6c757d; }
-[data-theme="dark"] #hero .tagline { color: #adb5bd; }
+#hero {
+    text-align: center;
+    margin-bottom: 3rem;
+}
 
-/* --- NEW: Content Block Layout --- */
+.affiliation {
+    color: #6c757d;
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.affiliation span {
+    display: block;
+}
+
+[data-theme="dark"] .affiliation {
+    color: #adb5bd;
+}
+
+/* --- Content Block Layout --- */
 .content-block {
-    background-color: var(--block-bg);
+    background-color: transparent;
+    /* No separate inner color */
     border: 1px solid var(--border-color);
-    border-radius: 12px; /* Curved corners */
+    border-radius: 12px;
     padding: 2rem;
     margin-bottom: 2rem;
-    transition: background-color 0.3s, border-color 0.3s;
 }
-@media (max-width: 600px) { .content-block { padding: 1.5rem; } }
 
-/* --- About Section & Profile Photo --- */
-#about::after { content: ""; display: table; clear: both; } /* Clearfix for floated photo */
+/* --- About, Contact & Research --- */
+#about::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 .profile-photo {
-    width: 100px;
-    height: 100px;
+    width: 170px;
+    height: 170px;
     object-fit: cover;
-    border-radius: 50%;
+    border-radius: 30%;
     float: left;
-    margin-right: 1.5rem;
-    margin-bottom: 0.5rem;
-    border: 2px solid var(--border-color);
+    margin: 0 1.5rem 0.5rem 0;
+    border: 1px solid var(--border-color);
 }
 
-/* --- Contact Section & Icons --- */
-.social-links { display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: center; }
-.social-links svg { width: 26px; height: 26px; } /* Icons inherit hover from .icon-group */
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 1.5rem;
+}
 
-/* --- Publications --- */
-#publications ul { padding-left: 20px; margin: 0; }
-#publications ul li { margin-bottom: 0.8rem; }
+.social-links svg {
+    width: 24px;
+    height: 24px;
+    stroke: var(--icon-color);
+    transition: all 0.1s ease-in-out;
+}
+
+.social-links a:hover svg {
+    /* transform: translateY(-1px); */
+    transform: scale(1) rotate(5deg);
+    stroke: var(--link-hover);
+}
+
+#research .project:not(:last-child) {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px dashed var(--border-color);
+}
+
+/* --- Gallery Page --- */
+#gallery .subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    margin: -1rem 0 2rem 0;
+    color: #6c757d;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 10px;
+}
+
+.photo-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    transition: opacity 0.2s ease-in-out;
+    border-radius: 4px;
+}
+
+.photo-grid a:hover img {
+    opacity: 0.8;
+}
+
+/* --- JS-Powered Lightbox --- */
+.lightbox {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox.show {
+    display: flex;
+}
+
+/* Shown with JS */
+.lightbox-content {
+    max-width: 90%;
+    max-height: 85%;
+    object-fit: contain;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    font-size: 3rem;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s;
+}
+
+.lightbox-close:hover {
+    transform: scale(1.1);
+}
 
 /* --- Footer --- */
-footer { border-top: 1px solid var(--border-color); padding-top: 1.5rem; margin-top: 2rem; text-align: center; font-size: 0.9rem; color: #6c757d; }
+footer {
+    border-top: 1px solid var(--border-color);
+    padding-top: 1.5rem;
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #6c757d;
+}
 
 /* --- Responsive Design --- */
 @media (max-width: 600px) {
-    .container { padding: 1rem; }
-    .profile-photo { float: none; display: block; margin: 0 auto 1.5rem auto; }
-    nav .logo { font-size: 1.2rem; }
-    .icon-group { position: absolute; top: 1.5rem; right: 1rem; }
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .content-block {
+        padding: 1.5rem;
+    }
+
+    .profile-photo {
+        float: none;
+        display: block;
+        margin: 0 auto 1.5rem auto;
+    }
 }
