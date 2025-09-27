@@ -76,7 +76,8 @@ h3 {
 }
 
 a {
-    color: var(--text-color);
+    /* color: var(--text-color); */
+    color: var(--link-hover);
     text-decoration: none;
     font-weight: 500;
     transition: color 0.2s ease-in-out;
