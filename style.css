@@ -1,6 +1,6 @@
 /* --- CSS Variables for Theming --- */
 :root {
-    --bg-color: rgb(233, 233, 233);
+    --bg-color: rgb(242, 242, 242);
     --text-color: #363c41;
     /* --header-font: 'Playfair Display', serif; */
     --header-font: 'Cormorant Garamond', serif; 
@@ -254,6 +254,13 @@ header {
     justify-content: center;
     margin-top: -0.5rem;
 
+}
+
+.social-links img {
+    width: 22px;
+    height: 22px;
+    /* /* stroke: var(--icon-color); */
+    transition: all 0.15s ease-in-out; */
 }
 
 .social-links svg {
