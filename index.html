@@ -72,6 +72,14 @@
                         <img src="figs/sabahashemi.jpeg" alt="A photo of Saba" class="profile-photo">
                         <p class="email-address">saba.hashemi<wbr> [at]&nbsp;usc.edu</p>
                         <div class="social-links">
+                            <a href="https://scholar.google.com/citations?user=0NH1L0oAAAAJ" target="_blank"
+                                aria-label="Google Scholar"><svg xmlns="http://www.w3.org/2000/svg" width="30"
+                                    height="30" viewBox="0 -3 24 28" fill="none" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.35L12 18l7.162-5.15L24 9.5z" />
+                                </svg></a>
+
                             <a href="https://github.com/savaw" target="_blank" aria-label="GitHub"><svg
                                     xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                     fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
@@ -109,7 +117,6 @@
                                 </svg>
                             </a>
 
-                            <!-- <a href="https://scholar.google.com/citations?user=[your-id]" target="_blank" aria-label="Google Scholar"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.35L12 18l7.162-5.15L24 9.5z"/></svg></a> -->
                         </div>
                     </div>
                     <div class="about-text">
@@ -125,7 +132,8 @@
                         <p>
                             My research interest lies at the intersection of AI and neuroscience.
                             I enjoy finding inspiration in the latest advances in AI to develop
-                            new tools that can address unique challenges of neural decoding.
+                            new tools, particularly through sequence and time-series modeling, 
+                            that can address unique challenges of neural decoding.
                             I’m currently excited about the potential of foundation models for neural activity,
                             which could help deepen our understanding of the brain and cognition.
                             I’m also curious about how ideas from the brain itself might guide us toward building more
@@ -141,7 +149,7 @@
                 </div>
             </section>
 
-
+<!-- 
             <section class="content-block" id="publications">
                 <h2>Publications & Presentations</h2>
 
@@ -170,19 +178,247 @@
                 </ul>
                 <span class="contribution-note"><sup>*</sup>Equal contribution</span>
             </section>
-<!-- 
+
             <section class="content-block" id="research">
-                <h2>Projects</h2>
-                <div class="project">
-                    <h3>Project Title One</h3>
-                    <p>A short description of this research project, its goals, and the methods used. Keep it concise
-                        and impactful.</p>
-                </div>
-                <div class="project">
-                    <h3>Project Title Two</h3>
-                    <p>A brief overview of another project. You can link to a project page or a repository if you have
-                        one.</p>
-                </div>
+
+
+
+
+                <section id="research">
+                    <h2>Projects</h2>
+
+                    <h3>Machine Learning & NLP</h3>
+                    <div class="project-grid">
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h3>EEG Classification via Transfer Learning</h3>
+                                <a href="https://github.com/Kiarashmo/Stroke-Patient-Motor-Imagery-Classification-System-by-Utilizing-Transfer-Learning"
+                                    target="_blank" aria-label="GitHub Repository"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path
+                                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <p>Utilized transfer learning for a system to classify motor imagery in stroke patients from
+                                EEG data.</p>
+                            <div class="project-tags"><span class="tag">EEG</span><span class="tag">Transfer
+                                    Learning</span><span class="tag">BCI</span></div>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h3>Domain Adaptation for Text Classification</h3>
+                                <a href="https://github.com/Savaw/Domain-Adaptation" target="_blank"
+                                    aria-label="GitHub Repository"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                        height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <p>Implemented several algorithms to tackle the domain adaptation problem in text
+                                classification tasks.</p>
+                            <div class="project-tags"><span class="tag">Domain Adaptation</span><span class="tag">Text
+                                    Classification</span><span class="tag">Python</span></div>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h3>Insighter: Smart Search Engine</h3>
+                                <a href="https://github.com/Savaw/Insighter" target="_blank"
+                                    aria-label="GitHub Repository"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                        height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <p>A smart search engine for Stack Overflow, leveraging Natural Language Processing
+                                techniques.</p>
+                            <div class="project-tags"><span class="tag">NLP</span><span class="tag">Search
+                                    Engine</span><span class="tag">Python</span></div>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h3>Watermark Detection</h3>
+                                <a href="https://github.com/Savaw/dk-watermark" target="_blank"
+                                    aria-label="GitHub Repository"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                        height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <p>Implemented a model for watermark detection in images using the Tensorflow framework.</p>
+                            <div class="project-tags"><span class="tag">Tensorflow</span><span
+                                    class="tag">Python</span><span class="tag">Computer Vision</span></div>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h3>ML Fundamentals: LTR & Perceptrons</h3>
+                                <a href="https://github.com/Savaw/ML-40717" target="_blank"
+                                    aria-label="GitHub Repository"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                        height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <p>Implemented a Multi-Layer Perceptron with PyTorch and a pair-wise learning-to-rank model
+                                from scratch.</p>
+                            <div class="project-tags"><span class="tag">PyTorch</span><span class="tag">Machine
+                                    Learning</span><span class="tag">Python</span></div>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h3>Text Retrieval & Classification System</h3>
+                                <a href="https://github.com/Savaw/MIR-project" target="_blank"
+                                    aria-label="GitHub Repository"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                        height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <p>Implemented an IR system, error correction, and classification/clustering algorithms for
+                                text data.</p>
+                            <div class="project-tags"><span class="tag">Information Retrieval</span><span
+                                    class="tag">NLP</span><span class="tag">Python</span></div>
+                        </div>
+                    </div>
+
+                    <h3 style="margin-top: 2.5rem;">Systems & High-Performance Computing</h3>
+                    <div class="project-grid">
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h3>SIMD Edge Detection with CUDA</h3>
+                                <a href="https://github.com/Savaw/Multicore/tree/main/Project" target="_blank"
+                                    aria-label="GitHub Repository"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                        height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <p>Implemented edge detection for images based on SIMD computations using NVIDIA CUDA.</p>
+                            <div class="project-tags"><span class="tag">CUDA</span><span class="tag">C++</span><span
+                                    class="tag">Image Processing</span></div>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h3>Decaf to MIPS Compiler</h3>
+                                <a href="https://github.com/pumpkini/compiler" target="_blank"
+                                    aria-label="GitHub Repository"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                        height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <p>Designed and programmed a complete compiler for the Decaf language, targeting MIPS
+                                assembly.</p>
+                            <div class="project-tags"><span class="tag">Compilers</span><span
+                                    class="tag">Python</span><span class="tag">MIPS</span></div>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h3>Socket-Based Network Protocols</h3>
+                                <a href="https://github.com/Savaw/Computer-Network-ce443" target="_blank"
+                                    aria-label="GitHub Repository"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                        height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <p>A collection of socket programming projects developed for a computer networks course.</p>
+                            <div class="project-tags"><span class="tag">Socket Programming</span><span
+                                    class="tag">C++</span><span class="tag">Computer Networks</span></div>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h3>Smart Traffic Light with UPPAAL</h3>
+                                <a href="https://github.com/titansarus/Realtime-Project" target="_blank"
+                                    aria-label="GitHub Repository"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                        height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <p>A smart traffic light system designed and verified for real-time constraints using the
+                                UPPAAL model checker.</p>
+                            <div class="project-tags"><span class="tag">Real-time Systems</span><span
+                                    class="tag">UPPAAL</span><span class="tag">Model Checking</span></div>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h3>Joystick-Controlled Servo with ATmega32</h3>
+                                <a href="https://github.com/parhamsaremi/embedded-project" target="_blank"
+                                    aria-label="GitHub Repository"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                        height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <p>Controlling a servo motor with a joystick using an ATmega32 microcontroller.</p>
+                            <div class="project-tags"><span class="tag">Embedded Systems</span><span
+                                    class="tag">C</span><span class="tag">ATmega32</span></div>
+                        </div>
+                    </div>
+
+                    <h3 style="margin-top: 2.5rem;">Web Development</h3>
+                    <div class="project-grid">
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h3>Sharif DataDays Website</h3>
+                                <a href="https://github.com/SharifDataDays/TheFrontEnd" target="_blank"
+                                    aria-label="GitHub Repository"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                        height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <p>Collaborated on developing the frontend of the DataDays website using the React
+                                framework.</p>
+                            <div class="project-tags"><span class="tag">React</span><span
+                                    class="tag">JavaScript</span><span class="tag">Frontend</span></div>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h3>Telenurse</h3>
+                                <a href="https://github.com/titansarus/Telenurse" target="_blank"
+                                    aria-label="GitHub Repository"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                        height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                            <p>A simple web application for enabling online medical services, built with the Django
+                                framework.</p>
+                            <div class="project-tags"><span class="tag">Django</span><span class="tag">Web
+                                    Development</span><span class="tag">Python</span></div>
+                        </div>
+                    </div>
+                </section>
+
+
             </section> -->
         </main>
 
