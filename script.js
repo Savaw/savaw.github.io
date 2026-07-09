@@ -54,4 +54,22 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // --- "Show more projects" toggle ---
+    const moreToggle = document.getElementById('more-projects-toggle');
+    const moreProjects = document.getElementById('more-projects');
+    if (moreToggle && moreProjects) {
+        moreToggle.addEventListener('click', () => {
+            const isHidden = moreProjects.hasAttribute('hidden');
+            if (isHidden) {
+                moreProjects.removeAttribute('hidden');
+            } else {
+                moreProjects.setAttribute('hidden', '');
+            }
+            moreToggle.setAttribute('aria-expanded', String(isHidden));
+            moreToggle.innerHTML = isHidden
+                ? 'Show fewer projects &#9652;'
+                : 'Show more projects &#9662;';
+        });
+    }
 });

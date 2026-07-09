@@ -470,9 +470,104 @@ footer {
 }
 
 .contribution-note {
-    display: block; 
+    display: block;
     font-size: 0.85rem;
     font-style: italic;
     color: var(--icon-color);
     margin-top: 0.25rem;
+}
+
+/* --- Featured Research --- */
+.featured-flex {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.featured-figure {
+    flex: 0 0 42%;
+    display: block;
+}
+
+.featured-figure img {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid color-mix(in srgb, var(--border-color), transparent 55%);
+    display: block;
+}
+
+.featured-text {
+    flex: 1;
+}
+
+.featured-text h3 {
+    font-size: 1.4rem;
+}
+
+.featured-subtitle {
+    font-style: italic;
+    color: var(--icon-color);
+    margin: 0.15rem 0 0.6rem 0;
+    font-size: 0.95rem;
+}
+
+.featured-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.9rem;
+}
+
+@media (max-width: 600px) {
+    .featured-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .featured-figure {
+        flex-basis: auto;
+        width: 100%;
+        max-width: 560px;
+    }
+
+    .featured-links {
+        justify-content: center;
+    }
+}
+
+.featured-links a {
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 0.3rem 0.7rem;
+    border: 1px solid color-mix(in srgb, var(--border-color), transparent 45%);
+    border-radius: 6px;
+    color: var(--text-color);
+    transition: all 0.2s ease-in-out;
+}
+
+.featured-links a:hover {
+    color: var(--link-hover);
+    border-color: var(--link-hover);
+}
+
+/* --- "Show more projects" toggle --- */
+.more-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: var(--body-font);
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--link-hover);
+    padding: 0.4rem 0;
+    margin-top: 1rem;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.more-toggle:hover {
+    opacity: 0.75;
+}
+
+.more-projects[hidden] {
+    display: none;
 }
