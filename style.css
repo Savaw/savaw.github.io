@@ -94,6 +94,34 @@ header {
     border-bottom: 1px solid var(--border-color);
 }
 
+header.has-horizon { padding-bottom: 0; border-bottom: none; }
+.horizon { display: block; width: 100%; height: 52px; margin: -12px 0 -7px; overflow: visible; pointer-events: none; }
+.horizon .hz-line { stroke: var(--border-color); fill: none; stroke-width: 1; stroke-linecap: round; stroke-linejoin: round; }
+.horizon .hz-fine { stroke-width: .9; }
+.horizon .hz-dot { fill: var(--border-color); }
+.horizon .hz-accent { fill: var(--link-hover); }
+.horizon .hz-soft { opacity: .55; }
+.horizon .hz-birds, .horizon .hz-stars { transition: opacity 1.2s ease; }
+.horizon .hz-stars { opacity: 0; }
+[data-theme="dark"] .horizon .hz-stars { opacity: 1; }
+[data-theme="dark"] .horizon .hz-birds { opacity: 0; }
+.horizon .hz-gap { stroke: var(--bg-color); stroke-width: 3; }
+.horizon .hz-sil { fill: var(--border-color); stroke: var(--bg-color); stroke-width: 1.1; paint-order: stroke; stroke-linejoin: round; }
+.horizon g.hz-sil > * { stroke: none; }
+.horizon .hz-arm { fill: none; stroke: var(--border-color); stroke-width: 3.2; stroke-linecap: round; stroke-linejoin: round; }
+.horizon .hz-armgap { fill: none; stroke: var(--bg-color); stroke-width: 5.2; stroke-linecap: round; stroke-linejoin: round; }
+.horizon .hz-fill { fill: var(--bg-color); }
+.horizon .hz-figure { transform-box: fill-box; transform-origin: 50% 100%; }
+.horizon .hz-narrow { display: none; }
+@media (max-width: 600px) { .horizon .hz-wide { display: none; } .horizon .hz-narrow { display: inline; } }
+.horizon .hz-sig { transform-box: view-box; transform-origin: 0 44.5px; }
+.horizon .hz-glow { fill: none; stroke: var(--link-hover); stroke-width: 1.1; stroke-linecap: round; }
+@media (max-width: 360px) {
+  .horizon { margin-top: 2px; }
+  .horizon .hz-figure { transform: scale(.85); }
+  .horizon .hz-sig { transform: scale(.78); }
+}
+
 .header-content {
     display: flex;
     justify-content: space-between;
@@ -261,8 +289,7 @@ header {
 .social-links img {
     width: 22px;
     height: 22px;
-    /* /* stroke: var(--icon-color); */
-    transition: all 0.15s ease-in-out; */
+    transition: all 0.15s ease-in-out;
 }
 
 .social-links svg {
@@ -447,6 +474,24 @@ footer {
 
     .profile-photo {
         margin-bottom: 0rem;
+    }
+
+    .horizon .hz-wide {
+        display: none;
+    }
+}
+
+@media (max-width: 360px) {
+    .horizon {
+        margin-top: 2px;
+    }
+
+    .horizon .hz-figure {
+        transform: scale(.85);
+    }
+
+    .horizon .hz-sig {
+        transform: scaleX(.72);
     }
 }
 

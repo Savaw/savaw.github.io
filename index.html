@@ -20,48 +20,364 @@
 <body>
     <div class="container">
 
-        <header>
-            <div class="header-content">
-                <div class="identity">
-                    <a href="index.html">
-                        <h1>Saba Hashemi</h1>
-                    </a>
-                    <div class="affiliation">
-                        <span>CS PhD Student at USC</span>
-                    </div>
-                </div>
-                <div class="icon-group">
-                    <!-- <a href="gallery.html" aria-label="Gallery">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                            <circle cx="8.5" cy="8.5" r="1.5"></circle>
-                            <polyline points="21 15 16 10 5 21"></polyline>
-                        </svg>
-                    </a> -->
-                    <button id="theme-toggle" aria-label="Toggle theme">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="icon-sun">
-                            <circle cx="12" cy="12" r="5"></circle>
-                            <line x1="12" y1="1" x2="12" y2="3"></line>
-                            <line x1="12" y1="21" x2="12" y2="23"></line>
-                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                            <line x1="1" y1="12" x2="3" y2="12"></line>
-                            <line x1="21" y1="12" x2="23" y2="12"></line>
-                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="icon-moon">
-                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </header>
+        <header class="has-horizon">
+  <div class="header-content">
+    <div class="identity">
+      <a href="index.html" style="text-decoration:none"><h1>Saba Hashemi</h1></a>
+      <div class="affiliation"><span>CS PhD Student at USC</span></div>
+    </div>
+    <div class="icon-group">
+      <button id="theme-toggle" aria-label="Toggle theme">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+      </button>
+    </div>
+  </div>
+
+  <svg class="horizon" aria-hidden="true" focusable="false">
+    <defs>
+      <clipPath id="hz-reveal">
+        <rect x="0" y="-40" height="140" width="0">
+          <animate attributeName="width" from="0" to="100%" begin="0.2s" dur="2.6s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines=".45 0 .25 1"/>
+        </rect>
+      </clipPath>
+      <g id="hz-flower">
+        <path class="hz-line hz-fine" d="M0 0 Q1.2 -4.5 0 -9"/>
+        <path class="hz-line hz-fine" d="M0.4 -3.2 Q3 -5.4 4 -4"/>
+        <circle class="hz-line hz-fine" cx="0" cy="-11" r="2"/>
+        <circle class="hz-dot" cx="0" cy="-11" r=".75"/>
+      </g>
+      <g id="hz-neuron">
+<path class="hz-dot" d="M-1.3 0 Q-.5 -6 -.7 -10.4 L.7 -10.4 Q.5 -6 1.3 0 Z"/>
+<path class="hz-line" stroke-width="0.95" d="M0.00 -11.00 Q-2.72 -13.20 -4.68 -16.20"/>
+<path class="hz-line" stroke-width="0.74" d="M-4.68 -16.20 Q-7.15 -17.19 -9.44 -18.59"/>
+<path class="hz-line" stroke-width="0.58" d="M-9.44 -18.59 Q-11.28 -18.81 -13.11 -19.16"/>
+<path class="hz-line" stroke-width="0.50" d="M-13.11 -19.16 Q-14.46 -19.19 -15.80 -18.90"/>
+<path class="hz-line" stroke-width="0.50" d="M-13.11 -19.16 Q-13.96 -20.17 -14.88 -21.11"/>
+<path class="hz-line" stroke-width="0.58" d="M-9.44 -18.59 Q-10.62 -20.18 -11.22 -22.14"/>
+<path class="hz-line" stroke-width="0.50" d="M-11.22 -22.14 Q-12.35 -23.03 -13.52 -23.88"/>
+<path class="hz-line" stroke-width="0.50" d="M-11.22 -22.14 Q-10.83 -23.46 -10.87 -24.87"/>
+<path class="hz-line" stroke-width="0.74" d="M-4.68 -16.20 Q-5.87 -18.20 -7.11 -20.16"/>
+<path class="hz-line" stroke-width="0.58" d="M-7.11 -20.16 Q-8.50 -21.02 -9.63 -22.25"/>
+<path class="hz-line" stroke-width="0.50" d="M-9.63 -22.25 Q-10.70 -22.79 -11.85 -23.12"/>
+<path class="hz-line" stroke-width="0.50" d="M-9.63 -22.25 Q-9.89 -23.31 -10.27 -24.33"/>
+<path class="hz-line" stroke-width="0.58" d="M-7.11 -20.16 Q-7.20 -21.73 -7.28 -23.30"/>
+<path class="hz-line" stroke-width="0.50" d="M-7.28 -23.30 Q-7.80 -24.34 -8.55 -25.25"/>
+<path class="hz-line" stroke-width="0.50" d="M-7.28 -23.30 Q-6.83 -24.42 -6.15 -25.43"/>
+<path class="hz-line" stroke-width="0.74" d="M-4.68 -16.20 Q-5.41 -18.72 -5.41 -21.39"/>
+<path class="hz-line" stroke-width="0.58" d="M-5.41 -21.39 Q-6.46 -23.06 -7.68 -24.63"/>
+<path class="hz-line" stroke-width="0.50" d="M-7.68 -24.63 Q-8.91 -25.54 -10.34 -26.15"/>
+<path class="hz-line" stroke-width="0.50" d="M-7.68 -24.63 Q-7.78 -26.11 -7.65 -27.59"/>
+<path class="hz-line" stroke-width="0.58" d="M-5.41 -21.39 Q-4.75 -23.14 -4.05 -24.88"/>
+<path class="hz-line" stroke-width="0.50" d="M-4.05 -24.88 Q-4.23 -26.31 -4.41 -27.74"/>
+<path class="hz-line" stroke-width="0.50" d="M-4.05 -24.88 Q-3.02 -25.86 -2.09 -26.94"/>
+<path class="hz-line" stroke-width="0.95" d="M0.00 -11.00 Q1.87 -13.96 4.50 -16.36"/>
+<path class="hz-line" stroke-width="0.74" d="M4.50 -16.36 Q4.42 -19.06 4.77 -21.75"/>
+<path class="hz-line" stroke-width="0.58" d="M4.77 -21.75 Q4.16 -23.49 3.33 -25.16"/>
+<path class="hz-line" stroke-width="0.50" d="M3.33 -25.16 Q2.30 -25.88 1.49 -26.88"/>
+<path class="hz-line" stroke-width="0.50" d="M3.33 -25.16 Q3.33 -26.44 3.69 -27.70"/>
+<path class="hz-line" stroke-width="0.58" d="M4.77 -21.75 Q5.37 -23.53 6.52 -25.07"/>
+<path class="hz-line" stroke-width="0.50" d="M6.52 -25.07 Q6.42 -26.42 6.34 -27.78"/>
+<path class="hz-line" stroke-width="0.50" d="M6.52 -25.07 Q7.58 -25.98 8.69 -26.81"/>
+<path class="hz-line" stroke-width="0.74" d="M4.50 -16.36 Q6.04 -18.26 7.18 -20.44"/>
+<path class="hz-line" stroke-width="0.58" d="M7.18 -20.44 Q7.19 -22.33 7.36 -24.21"/>
+<path class="hz-line" stroke-width="0.50" d="M7.36 -24.21 Q6.79 -25.52 6.43 -26.91"/>
+<path class="hz-line" stroke-width="0.50" d="M7.36 -24.21 Q8.07 -25.47 8.51 -26.87"/>
+<path class="hz-line" stroke-width="0.58" d="M7.18 -20.44 Q8.81 -21.28 10.14 -22.60"/>
+<path class="hz-line" stroke-width="0.50" d="M10.14 -22.60 Q10.66 -23.75 10.95 -25.00"/>
+<path class="hz-line" stroke-width="0.50" d="M10.14 -22.60 Q11.52 -22.82 12.81 -23.42"/>
+<path class="hz-line" stroke-width="0.74" d="M4.50 -16.36 Q6.65 -17.70 9.09 -18.49"/>
+<path class="hz-line" stroke-width="0.58" d="M9.09 -18.49 Q9.82 -20.06 10.95 -21.42"/>
+<path class="hz-line" stroke-width="0.50" d="M10.95 -21.42 Q11.22 -22.68 11.08 -24.00"/>
+<path class="hz-line" stroke-width="0.50" d="M10.95 -21.42 Q11.99 -22.05 12.88 -22.91"/>
+<path class="hz-line" stroke-width="0.58" d="M9.09 -18.49 Q10.96 -18.60 12.76 -19.25"/>
+<path class="hz-line" stroke-width="0.50" d="M12.76 -19.25 Q13.41 -20.31 14.23 -21.25"/>
+<path class="hz-line" stroke-width="0.50" d="M12.76 -19.25 Q13.97 -19.01 15.22 -18.97"/>
+<path class="hz-line" stroke-width="0.90" d="M0.00 -11.00 Q-0.49 -13.71 -0.38 -16.49"/>
+<path class="hz-line" stroke-width="0.70" d="M-0.38 -16.49 Q-1.19 -18.36 -2.15 -20.17"/>
+<path class="hz-line" stroke-width="0.55" d="M-2.15 -20.17 Q-3.08 -21.46 -4.31 -22.51"/>
+<path class="hz-line" stroke-width="0.50" d="M-4.31 -22.51 Q-5.27 -23.08 -6.18 -23.72"/>
+<path class="hz-line" stroke-width="0.50" d="M-4.31 -22.51 Q-4.47 -23.69 -4.95 -24.81"/>
+<path class="hz-line" stroke-width="0.55" d="M-2.15 -20.17 Q-1.95 -21.59 -2.20 -23.03"/>
+<path class="hz-line" stroke-width="0.50" d="M-2.20 -23.03 Q-2.75 -23.96 -3.14 -24.97"/>
+<path class="hz-line" stroke-width="0.50" d="M-2.20 -23.03 Q-1.84 -24.07 -1.30 -25.04"/>
+<path class="hz-line" stroke-width="0.70" d="M-0.38 -16.49 Q0.15 -18.52 0.97 -20.46"/>
+<path class="hz-line" stroke-width="0.55" d="M0.97 -20.46 Q0.67 -21.87 0.51 -23.31"/>
+<path class="hz-line" stroke-width="0.50" d="M0.51 -23.31 Q0.02 -24.14 -0.50 -24.96"/>
+<path class="hz-line" stroke-width="0.50" d="M0.51 -23.31 Q0.95 -24.32 1.12 -25.43"/>
+<path class="hz-line" stroke-width="0.55" d="M0.97 -20.46 Q2.03 -21.57 3.00 -22.76"/>
+<path class="hz-line" stroke-width="0.50" d="M3.00 -22.76 Q3.00 -23.80 3.34 -24.81"/>
+<path class="hz-line" stroke-width="0.50" d="M3.00 -22.76 Q3.90 -23.32 4.85 -23.80"/>
+<ellipse class="hz-dot" cx="0" cy="-11.0" rx="1.6" ry="1.8"/>
+<circle class="hz-dot" cx="-15.80" cy="-18.90" r=".55"/>
+<circle class="hz-dot" cx="-14.88" cy="-21.11" r=".55"/>
+<circle class="hz-dot" cx="-13.52" cy="-23.88" r=".55"/>
+<circle class="hz-dot" cx="-10.87" cy="-24.87" r=".55"/>
+<circle class="hz-dot" cx="-11.85" cy="-23.12" r=".55"/>
+<circle class="hz-dot" cx="-10.27" cy="-24.33" r=".55"/>
+<circle class="hz-dot" cx="-8.55" cy="-25.25" r=".55"/>
+<circle class="hz-dot" cx="-6.15" cy="-25.43" r=".55"/>
+<circle class="hz-dot" cx="-10.34" cy="-26.15" r=".55"/>
+<circle class="hz-dot" cx="-7.65" cy="-27.59" r=".55"/>
+<circle class="hz-dot" cx="-4.41" cy="-27.74" r=".55"/>
+<circle class="hz-dot" cx="-2.09" cy="-26.94" r=".55"/>
+<circle class="hz-dot" cx="1.49" cy="-26.88" r=".55"/>
+<circle class="hz-dot" cx="3.69" cy="-27.70" r=".55"/>
+<circle class="hz-dot" cx="6.34" cy="-27.78" r=".55"/>
+<circle class="hz-dot" cx="8.69" cy="-26.81" r=".55"/>
+<circle class="hz-dot" cx="6.43" cy="-26.91" r=".55"/>
+<circle class="hz-dot" cx="8.51" cy="-26.87" r=".55"/>
+<circle class="hz-dot" cx="10.95" cy="-25.00" r=".55"/>
+<circle class="hz-dot" cx="12.81" cy="-23.42" r=".55"/>
+<circle class="hz-dot" cx="11.08" cy="-24.00" r=".55"/>
+<circle class="hz-dot" cx="12.88" cy="-22.91" r=".55"/>
+<circle class="hz-dot" cx="14.23" cy="-21.25" r=".55"/>
+<circle class="hz-dot" cx="15.22" cy="-18.97" r=".55"/>
+<circle class="hz-dot" cx="-6.18" cy="-23.72" r=".55"/>
+<circle class="hz-dot" cx="-4.95" cy="-24.81" r=".55"/>
+<circle class="hz-dot" cx="-3.14" cy="-24.97" r=".55"/>
+<circle class="hz-dot" cx="-1.30" cy="-25.04" r=".55"/>
+<circle class="hz-dot" cx="-0.50" cy="-24.96" r=".55"/>
+<circle class="hz-dot" cx="1.12" cy="-25.43" r=".55"/>
+<circle class="hz-dot" cx="3.34" cy="-24.81" r=".55"/>
+<circle class="hz-dot" cx="4.85" cy="-23.80" r=".55"/>
+        <g opacity="0">
+<path class="hz-accent" d="M-1.3 0 Q-.5 -6 -.7 -10.4 L.7 -10.4 Q.5 -6 1.3 0 Z"/>
+<path class="hz-glow" stroke-width="0.95" d="M0.00 -11.00 Q-2.72 -13.20 -4.68 -16.20"/>
+<path class="hz-glow" stroke-width="0.74" d="M-4.68 -16.20 Q-7.15 -17.19 -9.44 -18.59"/>
+<path class="hz-glow" stroke-width="0.58" d="M-9.44 -18.59 Q-11.28 -18.81 -13.11 -19.16"/>
+<path class="hz-glow" stroke-width="0.50" d="M-13.11 -19.16 Q-14.46 -19.19 -15.80 -18.90"/>
+<path class="hz-glow" stroke-width="0.50" d="M-13.11 -19.16 Q-13.96 -20.17 -14.88 -21.11"/>
+<path class="hz-glow" stroke-width="0.58" d="M-9.44 -18.59 Q-10.62 -20.18 -11.22 -22.14"/>
+<path class="hz-glow" stroke-width="0.50" d="M-11.22 -22.14 Q-12.35 -23.03 -13.52 -23.88"/>
+<path class="hz-glow" stroke-width="0.50" d="M-11.22 -22.14 Q-10.83 -23.46 -10.87 -24.87"/>
+<path class="hz-glow" stroke-width="0.74" d="M-4.68 -16.20 Q-5.87 -18.20 -7.11 -20.16"/>
+<path class="hz-glow" stroke-width="0.58" d="M-7.11 -20.16 Q-8.50 -21.02 -9.63 -22.25"/>
+<path class="hz-glow" stroke-width="0.50" d="M-9.63 -22.25 Q-10.70 -22.79 -11.85 -23.12"/>
+<path class="hz-glow" stroke-width="0.50" d="M-9.63 -22.25 Q-9.89 -23.31 -10.27 -24.33"/>
+<path class="hz-glow" stroke-width="0.58" d="M-7.11 -20.16 Q-7.20 -21.73 -7.28 -23.30"/>
+<path class="hz-glow" stroke-width="0.50" d="M-7.28 -23.30 Q-7.80 -24.34 -8.55 -25.25"/>
+<path class="hz-glow" stroke-width="0.50" d="M-7.28 -23.30 Q-6.83 -24.42 -6.15 -25.43"/>
+<path class="hz-glow" stroke-width="0.74" d="M-4.68 -16.20 Q-5.41 -18.72 -5.41 -21.39"/>
+<path class="hz-glow" stroke-width="0.58" d="M-5.41 -21.39 Q-6.46 -23.06 -7.68 -24.63"/>
+<path class="hz-glow" stroke-width="0.50" d="M-7.68 -24.63 Q-8.91 -25.54 -10.34 -26.15"/>
+<path class="hz-glow" stroke-width="0.50" d="M-7.68 -24.63 Q-7.78 -26.11 -7.65 -27.59"/>
+<path class="hz-glow" stroke-width="0.58" d="M-5.41 -21.39 Q-4.75 -23.14 -4.05 -24.88"/>
+<path class="hz-glow" stroke-width="0.50" d="M-4.05 -24.88 Q-4.23 -26.31 -4.41 -27.74"/>
+<path class="hz-glow" stroke-width="0.50" d="M-4.05 -24.88 Q-3.02 -25.86 -2.09 -26.94"/>
+<path class="hz-glow" stroke-width="0.95" d="M0.00 -11.00 Q1.87 -13.96 4.50 -16.36"/>
+<path class="hz-glow" stroke-width="0.74" d="M4.50 -16.36 Q4.42 -19.06 4.77 -21.75"/>
+<path class="hz-glow" stroke-width="0.58" d="M4.77 -21.75 Q4.16 -23.49 3.33 -25.16"/>
+<path class="hz-glow" stroke-width="0.50" d="M3.33 -25.16 Q2.30 -25.88 1.49 -26.88"/>
+<path class="hz-glow" stroke-width="0.50" d="M3.33 -25.16 Q3.33 -26.44 3.69 -27.70"/>
+<path class="hz-glow" stroke-width="0.58" d="M4.77 -21.75 Q5.37 -23.53 6.52 -25.07"/>
+<path class="hz-glow" stroke-width="0.50" d="M6.52 -25.07 Q6.42 -26.42 6.34 -27.78"/>
+<path class="hz-glow" stroke-width="0.50" d="M6.52 -25.07 Q7.58 -25.98 8.69 -26.81"/>
+<path class="hz-glow" stroke-width="0.74" d="M4.50 -16.36 Q6.04 -18.26 7.18 -20.44"/>
+<path class="hz-glow" stroke-width="0.58" d="M7.18 -20.44 Q7.19 -22.33 7.36 -24.21"/>
+<path class="hz-glow" stroke-width="0.50" d="M7.36 -24.21 Q6.79 -25.52 6.43 -26.91"/>
+<path class="hz-glow" stroke-width="0.50" d="M7.36 -24.21 Q8.07 -25.47 8.51 -26.87"/>
+<path class="hz-glow" stroke-width="0.58" d="M7.18 -20.44 Q8.81 -21.28 10.14 -22.60"/>
+<path class="hz-glow" stroke-width="0.50" d="M10.14 -22.60 Q10.66 -23.75 10.95 -25.00"/>
+<path class="hz-glow" stroke-width="0.50" d="M10.14 -22.60 Q11.52 -22.82 12.81 -23.42"/>
+<path class="hz-glow" stroke-width="0.74" d="M4.50 -16.36 Q6.65 -17.70 9.09 -18.49"/>
+<path class="hz-glow" stroke-width="0.58" d="M9.09 -18.49 Q9.82 -20.06 10.95 -21.42"/>
+<path class="hz-glow" stroke-width="0.50" d="M10.95 -21.42 Q11.22 -22.68 11.08 -24.00"/>
+<path class="hz-glow" stroke-width="0.50" d="M10.95 -21.42 Q11.99 -22.05 12.88 -22.91"/>
+<path class="hz-glow" stroke-width="0.58" d="M9.09 -18.49 Q10.96 -18.60 12.76 -19.25"/>
+<path class="hz-glow" stroke-width="0.50" d="M12.76 -19.25 Q13.41 -20.31 14.23 -21.25"/>
+<path class="hz-glow" stroke-width="0.50" d="M12.76 -19.25 Q13.97 -19.01 15.22 -18.97"/>
+<path class="hz-glow" stroke-width="0.90" d="M0.00 -11.00 Q-0.49 -13.71 -0.38 -16.49"/>
+<path class="hz-glow" stroke-width="0.70" d="M-0.38 -16.49 Q-1.19 -18.36 -2.15 -20.17"/>
+<path class="hz-glow" stroke-width="0.55" d="M-2.15 -20.17 Q-3.08 -21.46 -4.31 -22.51"/>
+<path class="hz-glow" stroke-width="0.50" d="M-4.31 -22.51 Q-5.27 -23.08 -6.18 -23.72"/>
+<path class="hz-glow" stroke-width="0.50" d="M-4.31 -22.51 Q-4.47 -23.69 -4.95 -24.81"/>
+<path class="hz-glow" stroke-width="0.55" d="M-2.15 -20.17 Q-1.95 -21.59 -2.20 -23.03"/>
+<path class="hz-glow" stroke-width="0.50" d="M-2.20 -23.03 Q-2.75 -23.96 -3.14 -24.97"/>
+<path class="hz-glow" stroke-width="0.50" d="M-2.20 -23.03 Q-1.84 -24.07 -1.30 -25.04"/>
+<path class="hz-glow" stroke-width="0.70" d="M-0.38 -16.49 Q0.15 -18.52 0.97 -20.46"/>
+<path class="hz-glow" stroke-width="0.55" d="M0.97 -20.46 Q0.67 -21.87 0.51 -23.31"/>
+<path class="hz-glow" stroke-width="0.50" d="M0.51 -23.31 Q0.02 -24.14 -0.50 -24.96"/>
+<path class="hz-glow" stroke-width="0.50" d="M0.51 -23.31 Q0.95 -24.32 1.12 -25.43"/>
+<path class="hz-glow" stroke-width="0.55" d="M0.97 -20.46 Q2.03 -21.57 3.00 -22.76"/>
+<path class="hz-glow" stroke-width="0.50" d="M3.00 -22.76 Q3.00 -23.80 3.34 -24.81"/>
+<path class="hz-glow" stroke-width="0.50" d="M3.00 -22.76 Q3.90 -23.32 4.85 -23.80"/>
+<ellipse class="hz-accent" cx="0" cy="-11.0" rx="1.6" ry="1.8"/>
+<circle class="hz-accent" cx="-15.80" cy="-18.90" r=".55"/>
+<circle class="hz-accent" cx="-14.88" cy="-21.11" r=".55"/>
+<circle class="hz-accent" cx="-13.52" cy="-23.88" r=".55"/>
+<circle class="hz-accent" cx="-10.87" cy="-24.87" r=".55"/>
+<circle class="hz-accent" cx="-11.85" cy="-23.12" r=".55"/>
+<circle class="hz-accent" cx="-10.27" cy="-24.33" r=".55"/>
+<circle class="hz-accent" cx="-8.55" cy="-25.25" r=".55"/>
+<circle class="hz-accent" cx="-6.15" cy="-25.43" r=".55"/>
+<circle class="hz-accent" cx="-10.34" cy="-26.15" r=".55"/>
+<circle class="hz-accent" cx="-7.65" cy="-27.59" r=".55"/>
+<circle class="hz-accent" cx="-4.41" cy="-27.74" r=".55"/>
+<circle class="hz-accent" cx="-2.09" cy="-26.94" r=".55"/>
+<circle class="hz-accent" cx="1.49" cy="-26.88" r=".55"/>
+<circle class="hz-accent" cx="3.69" cy="-27.70" r=".55"/>
+<circle class="hz-accent" cx="6.34" cy="-27.78" r=".55"/>
+<circle class="hz-accent" cx="8.69" cy="-26.81" r=".55"/>
+<circle class="hz-accent" cx="6.43" cy="-26.91" r=".55"/>
+<circle class="hz-accent" cx="8.51" cy="-26.87" r=".55"/>
+<circle class="hz-accent" cx="10.95" cy="-25.00" r=".55"/>
+<circle class="hz-accent" cx="12.81" cy="-23.42" r=".55"/>
+<circle class="hz-accent" cx="11.08" cy="-24.00" r=".55"/>
+<circle class="hz-accent" cx="12.88" cy="-22.91" r=".55"/>
+<circle class="hz-accent" cx="14.23" cy="-21.25" r=".55"/>
+<circle class="hz-accent" cx="15.22" cy="-18.97" r=".55"/>
+<circle class="hz-accent" cx="-6.18" cy="-23.72" r=".55"/>
+<circle class="hz-accent" cx="-4.95" cy="-24.81" r=".55"/>
+<circle class="hz-accent" cx="-3.14" cy="-24.97" r=".55"/>
+<circle class="hz-accent" cx="-1.30" cy="-25.04" r=".55"/>
+<circle class="hz-accent" cx="-0.50" cy="-24.96" r=".55"/>
+<circle class="hz-accent" cx="1.12" cy="-25.43" r=".55"/>
+<circle class="hz-accent" cx="3.34" cy="-24.81" r=".55"/>
+<circle class="hz-accent" cx="4.85" cy="-23.80" r=".55"/>
+          <animate attributeName="opacity" begin="3.4s" dur="9s" repeatCount="indefinite" values="0;0;1;.7;0;0" keyTimes="0;.39;.43;.5;.62;1"/>
+        </g>
+      </g>
+    </defs>
+
+    <g clip-path="url(#hz-reveal)">
+      <!-- the rule -->
+      <line class="hz-line" x1="0" y1="44.5" x2="100%" y2="44.5"/>
+
+      <!-- neural signal: part of the line itself (longer on wide screens) -->
+      <svg x="4%" overflow="visible">
+        <g class="hz-sig">
+          <line class="hz-gap" x1="-.5" y1="44.5" x2="104.5" y2="44.5"/>
+          <line class="hz-gap hz-wide" x1="103.5" y1="44.5" x2="210.5" y2="44.5"/>
+          <path id="hz-trace" class="hz-line" d="M0.0 44.5 L4.0 44.5 L8.0 45.4 L10.0 44.5 L12.0 41.0 L14.0 47.5 L16.0 44.5 L20.0 43.4 L24.0 44.5 L26.5 31.0 L29.5 50.0 L32.5 38.0 L35.0 47.0 L37.5 44.5 L41.5 43.8 L45.5 43.4 L46.0 44.5 L48.0 41.0 L50.0 47.5 L52.0 44.5 L56.0 44.5 L60.0 44.5 L62.5 37.0 L65.0 49.0 L67.5 42.0 L70.0 44.5 L74.0 45.2 L78.0 44.5 L80.0 44.5 L82.5 31.0 L85.5 50.0 L88.5 38.0 L91.0 47.0 L93.5 44.5 L97.5 44.5 L101.5 44.9 L104.0 44.5"/>
+          <path id="hz-trace2" class="hz-line hz-wide" d="M104.0 44.5 L108.0 44.5 L112.0 43.6 L114.0 44.5 L116.0 41.0 L118.0 47.5 L120.0 44.5 L124.0 44.9 L128.0 44.5 L130.0 44.5 L132.5 37.0 L135.0 49.0 L137.5 42.0 L140.0 44.5 L144.0 44.5 L148.0 44.5 L150.0 44.5 L152.5 31.0 L155.5 50.0 L158.5 38.0 L161.0 47.0 L163.5 44.5 L167.5 44.5 L171.5 44.5 L172.0 44.5 L174.0 41.0 L176.0 47.5 L178.0 44.5 L182.0 44.5 L186.0 43.6 L188.0 44.5 L190.5 37.0 L193.0 49.0 L195.5 42.0 L198.0 44.5 L202.0 44.9 L206.0 45.1 L210.0 44.5"/>
+        </g>
+      </svg>
+
+      <!-- a lone flower on the line (hidden on narrow screens) -->
+      <svg x="40%" overflow="visible" class="hz-wide">
+        <g transform="translate(0,44.5) scale(1.1)"><g>
+          <use href="#hz-flower"/>
+          <animateTransform attributeName="transform" type="rotate" values="-4;4;-4" dur="5.5s" begin="-1s" repeatCount="indefinite"/>
+        </g></g>
+      </svg>
+
+      <!-- distant mountains -->
+      <svg x="100%" overflow="visible" class="hz-soft">
+        <path class="hz-line hz-wide" d="M-150 44.5 L-122 27 L-108 35 L-96 29 L-78 44.5"/>
+        <path class="hz-line hz-fill" d="M-104 44.5 L-62 13 L-50 22 L-40 16 L-6 44.5"/>
+        <path class="hz-line hz-fine" d="M-69 18.3 L-65 20.5 L-61.5 18 L-58 20 L-55.5 18.2"/>
+      </svg>
+
+      <!-- hill, flowers, and you with a camera -->
+      <svg x="58%" overflow="visible">
+        <line class="hz-gap" x1="-75" y1="44.5" x2="75" y2="44.5"/>
+        <path class="hz-line hz-fill" d="M-75 44.5 C-45 44.5 -30 30 0 30 C30 30 45 44.5 75 44.5"/>
+        <g transform="translate(-37.5,37.3)"><g>
+          <use href="#hz-flower"/>
+          <animateTransform attributeName="transform" type="rotate" values="-5;4;-5" dur="5s" repeatCount="indefinite"/>
+        </g></g>
+        <g transform="translate(-26,33.2) scale(.8)"><g>
+          <use href="#hz-flower"/>
+          <animateTransform attributeName="transform" type="rotate" values="4;-4;4" dur="6s" repeatCount="indefinite"/>
+        </g></g>
+        <g transform="translate(40,37.9)" class="hz-wide"><g>
+          <use href="#hz-flower"/>
+          <animateTransform attributeName="transform" type="rotate" values="-3;5;-3" dur="5.8s" begin="-2s" repeatCount="indefinite"/>
+        </g></g>
+        <ellipse class="hz-narrow" cx="58" cy="25.4" rx="12.5" ry="8.5" style="fill: var(--bg-color)"/>
+        <rect class="hz-narrow" x="56.4" y="31.4" width="3.2" height="11" style="fill: var(--bg-color)"/>
+        <use href="#hz-neuron" class="hz-narrow" transform="translate(58,42.89) scale(0.9)"/>
+        <!-- figure: side-view silhouette with backpack, camera at her eye -->
+        <g transform="translate(0,30.3) scale(.5) translate(-21,-54)"><g class="hz-figure">
+          <rect class="hz-sil" x="8" y="17.5" width="8" height="15" rx="3"/>
+          <rect class="hz-sil" x="7.2" y="25" width="3" height="6" rx="1.2"/>
+          <path class="hz-sil" d="M15.5 5 C13.6 11 14.2 19 15.2 25.5 L19.5 25 C18.6 19.5 18.8 14 20 9.5 Z"/>
+          <path class="hz-sil" d="M17.2 34 L21.2 34 L20.6 51 L22.6 51.6 L22.6 54 L16.6 54 L17 50.8 Z"/>
+          <path class="hz-sil" d="M17 16.6 C19 15.6 23 15.6 24.6 16.8 C26 22 25.8 29 25.2 35.4 L16.4 35.4 C16 29 16 22 17 16.6 Z"/>
+          <path class="hz-sil" d="M20.6 34 L25 34 L26.4 50.8 L29.6 51.6 L29.6 54 L22.8 54 L22.4 51 Z"/>
+          <g class="hz-sil"><rect x="19.6" y="12.5" width="3.4" height="5"/><circle cx="21" cy="8.6" r="5.6"/><path d="M15.4 8.6 C15.4 3.8 18.6 2.6 21.4 2.8 C24.6 3 26.4 5 26.2 7 L18.4 9.6 Z"/></g>
+          <rect class="hz-sil" x="25.2" y="5.6" width="8.6" height="6.4" rx="1.2"/>
+          <rect class="hz-sil" x="27.2" y="3.8" width="3.4" height="2.4" rx=".6"/>
+          <rect class="hz-sil" x="33.4" y="6.6" width="3.6" height="4.4" rx=".8"/>
+          <path class="hz-armgap" d="M21.6 18.6 L28.6 25.6 L29.6 13.2"/>
+          <path class="hz-arm" d="M21.6 18.6 L28.6 25.6 L29.6 13.2"/>
+          <path class="hz-accent" opacity="0" d="M42 4.5 l1.6 3.2 3.2 1.6 -3.2 1.6 -1.6 3.2 -1.6 -3.2 -3.2 -1.6 3.2 -1.6Z">
+            <animate attributeName="opacity" begin="5s" dur="9s" repeatCount="indefinite" values="0;0;1;0;0" keyTimes="0;.9;.92;.96;1"/>
+          </path>
+        </g></g>
+      </svg>
+
+      <!-- neuron tree by the mountains (desktop) -->
+      <svg x="100%" overflow="visible" class="hz-wide">
+        <ellipse cx="-148" cy="21.4" rx="17.8" ry="11.2" style="fill: var(--bg-color)"/>
+        <rect x="-149.6" y="28.7" width="3.2" height="15.8" style="fill: var(--bg-color)"/>
+        <use href="#hz-neuron" transform="translate(-148,44.5) scale(1.32)"/>
+      </svg>
+
+      <!-- birds circling above the mountains (day) -->
+      <svg x="100%" overflow="visible" class="hz-birds">
+        <g>
+          <animateTransform attributeName="transform" type="translate" values="-30 10;-60 4;-95 8;-70 14;-30 10" dur="16s" begin="2.5s" repeatCount="indefinite" calcMode="spline" keyTimes="0;.25;.5;.75;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1;.45 0 .55 1"/>
+          <g transform="translate(0,0)"><path class="hz-line hz-fine" d="M-4 0 Q-2 -2 0 0 Q2 -2 4 0"><animate attributeName="d" values="M-4 0 Q-2 -2 0 0 Q2 -2 4 0;M-4 1 Q-2 1.5 0 0 Q2 1.5 4 1;M-4 0 Q-2 -2 0 0 Q2 -2 4 0" dur=".9s" begin="0s" repeatCount="indefinite"/></path></g>
+          <g transform="translate(-9,-3) scale(.8)"><path class="hz-line hz-fine" d="M-4 0 Q-2 -2 0 0 Q2 -2 4 0"><animate attributeName="d" values="M-4 0 Q-2 -2 0 0 Q2 -2 4 0;M-4 1 Q-2 1.5 0 0 Q2 1.5 4 1;M-4 0 Q-2 -2 0 0 Q2 -2 4 0" dur=".75s" begin="-.3s" repeatCount="indefinite"/></path></g>
+          <g transform="translate(-16,2) scale(.7)"><path class="hz-line hz-fine" d="M-4 0 Q-2 -2 0 0 Q2 -2 4 0"><animate attributeName="d" values="M-4 0 Q-2 -2 0 0 Q2 -2 4 0;M-4 1 Q-2 1.5 0 0 Q2 1.5 4 1;M-4 0 Q-2 -2 0 0 Q2 -2 4 0" dur=".85s" begin="-.5s" repeatCount="indefinite"/></path></g>
+        </g>
+      </svg>
+      <!-- a few stars (night) -->
+      <svg x="100%" overflow="visible" class="hz-stars">
+        <g transform="translate(-24,8) scale(1.0)"><path class="hz-dot" d="M0 -3 Q.35 -.35 3 0 Q.35 .35 0 3 Q-.35 .35 -3 0 Q-.35 -.35 0 -3Z" opacity=".75"><animate attributeName="opacity" values=".75;.2;.75" dur="3.20s" begin="-0s" repeatCount="indefinite"/></path></g>
+        <g transform="translate(-48,3) scale(0.75)"><path class="hz-dot" d="M0 -3 Q.35 -.35 3 0 Q.35 .35 0 3 Q-.35 .35 -3 0 Q-.35 -.35 0 -3Z" opacity=".75"><animate attributeName="opacity" values=".75;.2;.75" dur="3.65s" begin="-1.3s" repeatCount="indefinite"/></path></g>
+        <g transform="translate(-90,7) scale(0.85)"><path class="hz-dot" d="M0 -3 Q.35 -.35 3 0 Q.35 .35 0 3 Q-.35 .35 -3 0 Q-.35 -.35 0 -3Z" opacity=".75"><animate attributeName="opacity" values=".75;.2;.75" dur="4.10s" begin="-2.6s" repeatCount="indefinite"/></path></g>
+        <g transform="translate(-114,15) scale(0.6)"><path class="hz-dot" d="M0 -3 Q.35 -.35 3 0 Q.35 .35 0 3 Q-.35 .35 -3 0 Q-.35 -.35 0 -3Z" opacity=".75"><animate attributeName="opacity" values=".75;.2;.75" dur="4.55s" begin="-0.7s" repeatCount="indefinite"/></path></g>
+        <g transform="translate(-196,9) scale(0.8)" class="hz-wide"><path class="hz-dot" d="M0 -3 Q.35 -.35 3 0 Q.35 .35 0 3 Q-.35 .35 -3 0 Q-.35 -.35 0 -3Z" opacity=".75"><animate attributeName="opacity" values=".75;.2;.75" dur="5.00s" begin="-1.9s" repeatCount="indefinite"/></path></g>
+        <g transform="translate(-238,4) scale(0.6)" class="hz-wide"><path class="hz-dot" d="M0 -3 Q.35 -.35 3 0 Q.35 .35 0 3 Q-.35 .35 -3 0 Q-.35 -.35 0 -3Z" opacity=".75"><animate attributeName="opacity" values=".75;.2;.75" dur="5.45s" begin="-3.1s" repeatCount="indefinite"/></path></g>
+        <g transform="translate(-270,14) scale(0.55)" class="hz-wide"><path class="hz-dot" d="M0 -3 Q.35 -.35 3 0 Q.35 .35 0 3 Q-.35 .35 -3 0 Q-.35 -.35 0 -3Z" opacity=".75"><animate attributeName="opacity" values=".75;.2;.75" dur="5.90s" begin="-2.2s" repeatCount="indefinite"/></path></g>
+      </svg>
+      <circle class="hz-accent" r="1.7" opacity="0">
+        <animateMotion id="hz-pulse" begin="3.4s" dur="9s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;.4;1" calcMode="linear" path="M0 44.5"/>
+        <animate attributeName="opacity" begin="3.4s" dur="9s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;.01;.39;.41;1"/>
+      </circle>
+    </g>
+  </svg>
+  <script>
+    // Route the pulse: along the wave, across the line, over the hill, into the neuron tree.
+    (function () {
+      var svg = document.querySelector('.horizon'), motion = document.getElementById('hz-pulse');
+      if (!svg || !motion) return;
+      function bez(t, a, b, c, d) { var u = 1 - t; return u*u*u*a + 3*u*u*t*b + 3*u*t*t*c + t*t*t*d; }
+      function route() {
+        var W = svg.getBoundingClientRect().width;
+        var narrow = window.matchMedia('(max-width: 600px)').matches;
+        var s = window.matchMedia('(max-width: 360px)').matches ? 0.78 : 1;
+        var x0 = 0.04 * W, xc = 0.58 * W, pts = [], m, re = /(-?[\d.]+)\s+(-?[\d.]+)/g;
+        var d = document.getElementById('hz-trace').getAttribute('d');
+        if (!narrow) d += ' ' + document.getElementById('hz-trace2').getAttribute('d');
+        while ((m = re.exec(d))) pts.push([x0 + s * +m[1], 44.5 + s * (+m[2] - 44.5)]);
+        var i, t, x;
+        for (i = 0; i <= 20; i++) { t = i / 20; pts.push([xc + bez(t, -75, -45, -30, 0), bez(t, 44.5, 44.5, 30, 30)]); }
+        for (i = 1; i <= 20; i++) {
+          t = i / 20; x = bez(t, 0, 30, 45, 75);
+          if (narrow && x > 58) break;
+          pts.push([xc + x, bez(t, 30, 30, 44.5, 44.5)]);
+        }
+        if (narrow) { pts.push([xc + 58, 42.89], [xc + 58, 32.99]); }
+        else { pts.push([W - 148, 44.5], [W - 148, 44.5 - 11 * 1.32]); }
+        motion.setAttribute('path', 'M' + pts.map(function (p) { return p[0].toFixed(1) + ' ' + p[1].toFixed(1); }).join(' L'));
+      }
+      route();
+      window.addEventListener('resize', route);
+    })();
+    // Respect reduced-motion: show the finished drawing with no animation.
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.querySelectorAll('.horizon animate, .horizon animateTransform, .horizon animateMotion').forEach(function (a) { a.remove(); });
+      document.querySelector('#hz-reveal rect').setAttribute('width', '100%');
+    }
+  </script>
+</header>
+
+
+
 
         <main>
 
