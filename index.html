@@ -242,7 +242,9 @@
 
     <g clip-path="url(#hz-reveal)">
       <!-- the rule -->
-      <line class="hz-line" x1="0" y1="44.5" x2="100%" y2="44.5"/>
+      <!-- terminal prompt -->
+      <path class="hz-line" d="M1.5 40.8 L5.2 44.5 L1.5 48.2"/>
+      <line class="hz-line" x1="9" y1="44.5" x2="100%" y2="44.5"/>
 
       <!-- neural signal: part of the line itself (longer on wide screens) -->
       <svg x="4%" overflow="visible">
@@ -288,6 +290,37 @@
         <ellipse class="hz-narrow" cx="58" cy="25.4" rx="12.5" ry="8.5" style="fill: var(--bg-color)"/>
         <rect class="hz-narrow" x="56.4" y="31.4" width="3.2" height="11" style="fill: var(--bg-color)"/>
         <use href="#hz-neuron" class="hz-narrow" transform="translate(58,42.89) scale(0.9)"/>
+        <!-- night: a small neural network in the stars, running a forward pass -->
+        <g class="hz-night" transform="translate(16,0)">
+          <g class="hz-edges">
+            <path class="hz-e1" d="M22 6 L44 2" pathLength="1"/>
+            <path class="hz-e1" d="M22 6 L44 9" pathLength="1"/>
+            <path class="hz-e1" d="M22 6 L44 16" pathLength="1"/>
+            <path class="hz-e1" d="M22 15 L44 2" pathLength="1"/>
+            <path class="hz-e1" d="M22 15 L44 9" pathLength="1"/>
+            <path class="hz-e1" d="M22 15 L44 16" pathLength="1"/>
+            <path class="hz-e2" d="M44 2 L64 3" pathLength="1"/>
+            <path class="hz-e2" d="M44 2 L64 11" pathLength="1"/>
+            <path class="hz-e2" d="M44 9 L64 3" pathLength="1"/>
+            <path class="hz-e2" d="M44 9 L64 11" pathLength="1"/>
+            <path class="hz-e2" d="M44 16 L64 3" pathLength="1"/>
+            <path class="hz-e2" d="M44 16 L64 11" pathLength="1"/>
+          </g>
+          <circle class="hz-dot" cx="22" cy="6" r=".9"><animate attributeName="opacity" values="1;.35;1" dur="3.55s" repeatCount="indefinite"/></circle>
+          <circle class="hz-accent" cx="22" cy="6" r="1.25" opacity="0"><animate attributeName="opacity" values="0;0;1;0;0" keyTimes="0;0.0;0.03;0.20;1" dur="10s" begin="4s" repeatCount="indefinite"/></circle>
+          <circle class="hz-dot" cx="22" cy="15" r=".9"><animate attributeName="opacity" values="1;.35;1" dur="4.25s" repeatCount="indefinite"/></circle>
+          <circle class="hz-accent" cx="22" cy="15" r="1.25" opacity="0"><animate attributeName="opacity" values="0;0;1;0;0" keyTimes="0;0.0;0.03;0.20;1" dur="10s" begin="4s" repeatCount="indefinite"/></circle>
+          <circle class="hz-dot" cx="44" cy="2" r=".9"><animate attributeName="opacity" values="1;.35;1" dur="4.10s" repeatCount="indefinite"/></circle>
+          <circle class="hz-accent" cx="44" cy="2" r="1.25" opacity="0"><animate attributeName="opacity" values="0;0;1;0;0" keyTimes="0;0.08;0.11;0.28;1" dur="10s" begin="4s" repeatCount="indefinite"/></circle>
+          <circle class="hz-dot" cx="44" cy="9" r=".9"><animate attributeName="opacity" values="1;.35;1" dur="4.80s" repeatCount="indefinite"/></circle>
+          <circle class="hz-accent" cx="44" cy="9" r="1.25" opacity="0"><animate attributeName="opacity" values="0;0;1;0;0" keyTimes="0;0.08;0.11;0.28;1" dur="10s" begin="4s" repeatCount="indefinite"/></circle>
+          <circle class="hz-dot" cx="44" cy="16" r=".9"><animate attributeName="opacity" values="1;.35;1" dur="5.50s" repeatCount="indefinite"/></circle>
+          <circle class="hz-accent" cx="44" cy="16" r="1.25" opacity="0"><animate attributeName="opacity" values="0;0;1;0;0" keyTimes="0;0.08;0.11;0.28;1" dur="10s" begin="4s" repeatCount="indefinite"/></circle>
+          <circle class="hz-dot" cx="64" cy="3" r=".9"><animate attributeName="opacity" values="1;.35;1" dur="4.60s" repeatCount="indefinite"/></circle>
+          <circle class="hz-accent" cx="64" cy="3" r="1.25" opacity="0"><animate attributeName="opacity" values="0;0;1;0;0" keyTimes="0;0.16;0.19;0.36;1" dur="10s" begin="4s" repeatCount="indefinite"/></circle>
+          <circle class="hz-dot" cx="64" cy="11" r=".9"><animate attributeName="opacity" values="1;.35;1" dur="5.30s" repeatCount="indefinite"/></circle>
+          <circle class="hz-accent" cx="64" cy="11" r="1.25" opacity="0"><animate attributeName="opacity" values="0;0;1;0;0" keyTimes="0;0.16;0.19;0.36;1" dur="10s" begin="4s" repeatCount="indefinite"/></circle>
+        </g>
         <!-- figure: side-view silhouette with backpack, camera at her eye -->
         <g transform="translate(0,30.3) scale(.5) translate(-21,-54)"><g class="hz-figure">
           <rect class="hz-sil" x="8" y="17.5" width="8" height="15" rx="3"/>
@@ -328,17 +361,22 @@
       <svg x="100%" overflow="visible" class="hz-stars">
         <g transform="translate(-24,8) scale(1.0)"><path class="hz-dot" d="M0 -3 Q.35 -.35 3 0 Q.35 .35 0 3 Q-.35 .35 -3 0 Q-.35 -.35 0 -3Z" opacity=".75"><animate attributeName="opacity" values=".75;.2;.75" dur="3.20s" begin="-0s" repeatCount="indefinite"/></path></g>
         <g transform="translate(-48,3) scale(0.75)"><path class="hz-dot" d="M0 -3 Q.35 -.35 3 0 Q.35 .35 0 3 Q-.35 .35 -3 0 Q-.35 -.35 0 -3Z" opacity=".75"><animate attributeName="opacity" values=".75;.2;.75" dur="3.65s" begin="-1.3s" repeatCount="indefinite"/></path></g>
-        <g transform="translate(-90,7) scale(0.85)"><path class="hz-dot" d="M0 -3 Q.35 -.35 3 0 Q.35 .35 0 3 Q-.35 .35 -3 0 Q-.35 -.35 0 -3Z" opacity=".75"><animate attributeName="opacity" values=".75;.2;.75" dur="4.10s" begin="-2.6s" repeatCount="indefinite"/></path></g>
-        <g transform="translate(-114,15) scale(0.6)"><path class="hz-dot" d="M0 -3 Q.35 -.35 3 0 Q.35 .35 0 3 Q-.35 .35 -3 0 Q-.35 -.35 0 -3Z" opacity=".75"><animate attributeName="opacity" values=".75;.2;.75" dur="4.55s" begin="-0.7s" repeatCount="indefinite"/></path></g>
+        <g transform="translate(-90,7) scale(0.85)" class="hz-wide"><path class="hz-dot" d="M0 -3 Q.35 -.35 3 0 Q.35 .35 0 3 Q-.35 .35 -3 0 Q-.35 -.35 0 -3Z" opacity=".75"><animate attributeName="opacity" values=".75;.2;.75" dur="4.10s" begin="-2.6s" repeatCount="indefinite"/></path></g>
+        <g transform="translate(-114,15) scale(0.6)" class="hz-wide"><path class="hz-dot" d="M0 -3 Q.35 -.35 3 0 Q.35 .35 0 3 Q-.35 .35 -3 0 Q-.35 -.35 0 -3Z" opacity=".75"><animate attributeName="opacity" values=".75;.2;.75" dur="4.55s" begin="-0.7s" repeatCount="indefinite"/></path></g>
         <g transform="translate(-196,9) scale(0.8)" class="hz-wide"><path class="hz-dot" d="M0 -3 Q.35 -.35 3 0 Q.35 .35 0 3 Q-.35 .35 -3 0 Q-.35 -.35 0 -3Z" opacity=".75"><animate attributeName="opacity" values=".75;.2;.75" dur="5.00s" begin="-1.9s" repeatCount="indefinite"/></path></g>
-        <g transform="translate(-238,4) scale(0.6)" class="hz-wide"><path class="hz-dot" d="M0 -3 Q.35 -.35 3 0 Q.35 .35 0 3 Q-.35 .35 -3 0 Q-.35 -.35 0 -3Z" opacity=".75"><animate attributeName="opacity" values=".75;.2;.75" dur="5.45s" begin="-3.1s" repeatCount="indefinite"/></path></g>
-        <g transform="translate(-270,14) scale(0.55)" class="hz-wide"><path class="hz-dot" d="M0 -3 Q.35 -.35 3 0 Q.35 .35 0 3 Q-.35 .35 -3 0 Q-.35 -.35 0 -3Z" opacity=".75"><animate attributeName="opacity" values=".75;.2;.75" dur="5.90s" begin="-2.2s" repeatCount="indefinite"/></path></g>
       </svg>
       <circle class="hz-accent" r="1.7" opacity="0">
-        <animateMotion id="hz-pulse" begin="3.4s" dur="9s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;.4;1" calcMode="linear" path="M0 44.5"/>
+        <animateMotion id="hz-pulse" begin="0s" dur="9s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;.4;1" calcMode="linear" path="M0 44.5"/>
         <animate attributeName="opacity" begin="3.4s" dur="9s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;.01;.39;.41;1"/>
       </circle>
     </g>
+    <!-- cursor: rides the drawing edge, then blinks at the end of the line -->
+    <svg x="0%" overflow="visible">
+      <animate attributeName="x" from="0%" to="100%" begin="0.2s" dur="2.6s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines=".45 0 .25 1"/>
+      <rect class="hz-dot" x="-3.2" y="36.2" width="2.2" height="8.3" rx=".3">
+        <animate attributeName="opacity" values="1;0" dur="1.1s" calcMode="discrete" repeatCount="indefinite" begin="2.8s"/>
+      </rect>
+    </svg>
   </svg>
   <script>
     // Route the pulse: along the wave, across the line, over the hill, into the neuron tree.
@@ -366,6 +404,7 @@
         motion.setAttribute('path', 'M' + pts.map(function (p) { return p[0].toFixed(1) + ' ' + p[1].toFixed(1); }).join(' L'));
       }
       route();
+      window.addEventListener('load', route);
       window.addEventListener('resize', route);
     })();
     // Respect reduced-motion: show the finished drawing with no animation.
@@ -375,6 +414,8 @@
     }
   </script>
 </header>
+
+
 
 
 

@@ -102,8 +102,15 @@ header.has-horizon { padding-bottom: 0; border-bottom: none; }
 .horizon .hz-accent { fill: var(--link-hover); }
 .horizon .hz-soft { opacity: .55; }
 .horizon .hz-birds, .horizon .hz-stars { transition: opacity 1.2s ease; }
-.horizon .hz-stars { opacity: 0; }
-[data-theme="dark"] .horizon .hz-stars { opacity: 1; }
+.horizon .hz-stars, .horizon .hz-night { opacity: 0; }
+.horizon .hz-night { transition: opacity 1.2s ease; }
+.horizon .hz-edges path { fill: none; stroke: var(--border-color); stroke-width: .5; stroke-opacity: .75; stroke-dasharray: 1; stroke-dashoffset: 1; opacity: 0; }
+.horizon .hz-edges .hz-e1 { animation: hz-e1 10s 4s linear infinite; }
+.horizon .hz-edges .hz-e2 { animation: hz-e2 10s 4s linear infinite; }
+@keyframes hz-e1 { 0% { stroke-dashoffset: 1; opacity: 1; } 8%, 40% { stroke-dashoffset: 0; opacity: 1; } 50% { stroke-dashoffset: 0; opacity: 0; } 51%, 100% { stroke-dashoffset: 1; opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .horizon .hz-edges path { animation: none; } }
+@keyframes hz-e2 { 0%, 8% { stroke-dashoffset: 1; opacity: 1; } 16%, 40% { stroke-dashoffset: 0; opacity: 1; } 50% { stroke-dashoffset: 0; opacity: 0; } 51%, 100% { stroke-dashoffset: 1; opacity: 0; } }
+[data-theme="dark"] .horizon .hz-stars, [data-theme="dark"] .horizon .hz-night { opacity: 1; }
 [data-theme="dark"] .horizon .hz-birds { opacity: 0; }
 .horizon .hz-gap { stroke: var(--bg-color); stroke-width: 3; }
 .horizon .hz-sil { fill: var(--border-color); stroke: var(--bg-color); stroke-width: 1.1; paint-order: stroke; stroke-linejoin: round; }
