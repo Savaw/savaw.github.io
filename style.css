@@ -100,6 +100,16 @@ header.has-horizon { padding-bottom: 0; border-bottom: none; }
 .horizon .hz-fine { stroke-width: .9; }
 .horizon .hz-dot { fill: var(--border-color); }
 .horizon .hz-accent { fill: var(--link-hover); }
+.horizon #hz-flower .hz-line,
+.horizon #hz-neuron .hz-line {
+    stroke: var(--border-color);
+}
+
+.horizon #hz-flower .hz-dot,
+.horizon #hz-neuron .hz-dot {
+    fill: var(--border-color);
+}
+
 .horizon .hz-soft { opacity: .55; }
 .horizon .hz-birds, .horizon .hz-stars { transition: opacity 1.2s ease; }
 .horizon .hz-stars, .horizon .hz-night { opacity: 0; }
@@ -122,7 +132,8 @@ header.has-horizon { padding-bottom: 0; border-bottom: none; }
 .horizon .hz-narrow { display: none; }
 @media (max-width: 600px) { .horizon .hz-wide { display: none; } .horizon .hz-narrow { display: inline; } }
 .horizon .hz-sig { transform-box: view-box; transform-origin: 0 44.5px; }
-.horizon .hz-glow { fill: none; stroke: var(--link-hover); stroke-width: 1.1; stroke-linecap: round; }
+.horizon .hz-glow { fill: none; stroke: var(--link-hover); stroke-width: .45; stroke-linecap: round; stroke-dasharray: 1 1; stroke-dashoffset: var(--hz-spread, 1); }
+.horizon .hz-halo { fill: none; stroke: var(--bg-color); stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
 @media (max-width: 360px) {
   .horizon { margin-top: 2px; }
   .horizon .hz-figure { transform: scale(.85); }
